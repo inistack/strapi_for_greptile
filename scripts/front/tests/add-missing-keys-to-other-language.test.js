@@ -11,7 +11,7 @@ describe('updateMissingKeysToJSON', () => {
     // Save original `vi.json` file content
     const originalTargetTranslationFileContent = fs.readFileSync(
       TARGET_TRANSLATION_FILE_PATH,
-      'utf8'
+      'ascii'
     );
     const originalTargetTranslationFileJSON = JSON.parse(originalTargetTranslationFileContent);
     const mainTranslationFileJSON = await fs.readJSON(SOURCE_TRANSLATION_FILE_PATH);
